@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.leaflet-container {
+	background: #f8fafc;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+	z-index: 500 !important;
+}
+
+.leaflet-control {
+	z-index: 500 !important;
+}
