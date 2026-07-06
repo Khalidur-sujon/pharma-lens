@@ -12,3 +12,35 @@
 .leaflet-control {
 	z-index: 500 !important;
 }
+
+/* =========================
+   Global Thin Scrollbar
+========================= */
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+	width: 2px;
+	height: 3px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: rgba(148, 163, 184, 0.5);
+	border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: rgba(148, 163, 184, 0.8);
+}
+
+*::-webkit-scrollbar-corner {
+	background: transparent;
+}
