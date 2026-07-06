@@ -8,25 +8,28 @@ import AllZoneSection from "../../features/dashboard/sections/AllZoneSection";
 
 export default function AppLayout() {
 	return (
-		<div className="flex h-screen flex-col bg-slate-50 overflow-hidden">
+		<div className="flex h-screen flex-col overflow-hidden bg-slate-50">
 			<AppHeader />
 
 			<div className="flex flex-1 min-h-0 overflow-hidden">
 				<AppSidebar />
 
-				<div className="flex flex-1 flex-col min-h-0 overflow-y-auto p-4 md:p-6 gap-4 md:gap-6">
+				<div className="flex flex-1 min-h-0 flex-col overflow-y-auto p-3 sm:p-4 md:p-5 lg:p-6 gap-4 md:gap-6">
 					<KpiSection />
 
-					<div className="grid flex-1 min-h-0 grid-cols-1 gap-4 md:gap-6 lg:grid-cols-12">
-						<div className="lg:col-span-3 min-h-0">
+					<div className="grid grid-cols-1 gap-4 md:gap-6 lg:grid-cols-12">
+						{/* Map first on mobile */}
+						<div className="order-2 lg:order-1 lg:col-span-3 max-h-32">
 							<AllZoneSection />
 						</div>
 
-						<div className="lg:col-span-6 flex min-h-0 flex-col overflow-hidden rounded-xl border border-slate-200 bg-white">
-							<MainContent />
+						<div className="order-1 lg:order-2 lg:col-span-6 ">
+							<div className="overflow-hidden rounded-xl border border-slate-200 bg-white max-h-96 ">
+								<MainContent />
+							</div>
 						</div>
 
-						<div className="lg:col-span-3 min-h-0">
+						<div className="order-3 lg:col-span-3">
 							<PerformanceSection />
 						</div>
 					</div>
