@@ -7,19 +7,23 @@ export default function FitBounds() {
 	const map = useMap();
 
 	useEffect(() => {
-		if (!map) return;
+		const layer = L.geoJSON(tangail as any);
+		const bounds = layer.getBounds();
 
-		const geoLayer = L.geoJSON(tangail as any);
+		if (!bounds.isValid()) return;
 
-		const bounds = geoLayer.getBounds();
+		map.fitBounds(bounds, {
+			padding: [20, 20],
+			maxZoom: 9,
+			animate: false,
+		});
 
-		if (bounds.isValid()) {
-			map.fitBounds(bounds, {
-				padding: [20, 20],
-				maxZoom: 9,
-				animate: true,
+		// Move the map upward without changing zoom.
+		requestAnimationFrame(() => {
+			map.panBy([0, 70], {
+				animate: false,
 			});
-		}
+		});
 	}, [map]);
 
 	return null;

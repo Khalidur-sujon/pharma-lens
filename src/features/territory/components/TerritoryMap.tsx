@@ -13,7 +13,7 @@ export default function TerritoryMap() {
 				center={[23.8, 90.35]}
 				zoom={6}
 				minZoom={5}
-				maxZoom={14}
+				maxZoom={10}
 				scrollWheelZoom
 				maxBounds={[
 					[20.5, 88.0],
