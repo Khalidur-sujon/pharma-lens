@@ -1,29 +1,15 @@
-import { useState } from "react";
 import { CalendarDays } from "lucide-react";
-
-const dateFilters = [
-	{ label: "3D", value: "3d" },
-	{ label: "15D", value: "15d" },
-	{ label: "30D", value: "30d" },
-	{ label: "3M", value: "3m" },
-	{ label: "6M", value: "6m" },
-	{ label: "1Y", value: "1y" },
-];
-
-const activeIndexMap = {
-	"3d": 0,
-	"15d": 1,
-	"30d": 2,
-	"3m": 3,
-	"6m": 4,
-	"1y": 5,
-};
+import {
+	DATE_FILTERS,
+	useDateFilterStore,
+} from "../../../shared/store/dateFilterStore";
 
 export default function DateFilter() {
-	const [activeFilter, setActiveFilter] = useState("30d");
+	const { activeFilter, setActiveFilter } = useDateFilterStore();
 
-	const activeIndex =
-		activeIndexMap[activeFilter as keyof typeof activeIndexMap];
+	const activeIndex = DATE_FILTERS.findIndex(
+		(filter) => filter.value === activeFilter,
+	);
 
 	return (
 		<div className="flex items-center rounded-xl border border-slate-200 bg-slate-50 p-1 shadow-sm">
@@ -40,23 +26,19 @@ export default function DateFilter() {
 					}}
 				/>
 
-				{dateFilters.map((filter) => {
-					const active = activeFilter === filter.value;
-
-					return (
-						<button
-							key={filter.value}
-							onClick={() => setActiveFilter(filter.value)}
-							className={`relative z-10 flex h-8 w-13 items-center justify-center rounded-lg text-sm font-medium transition-colors duration-300 active:scale-95 ${
-								active
-									? "text-blue-600"
-									: "text-slate-500 hover:text-slate-900"
-							}`}
-						>
-							{filter.label}
-						</button>
-					);
-				})}
+				{DATE_FILTERS.map((filter) => (
+					<button
+						key={filter.value}
+						onClick={() => setActiveFilter(filter.value)}
+						className={`relative z-10 flex h-8 w-13 items-center justify-center rounded-lg text-sm font-medium transition-colors duration-300 active:scale-95 hover:cursor-pointer ${
+							activeFilter === filter.value
+								? "text-blue-600"
+								: "text-slate-500 hover:text-slate-900"
+						}`}
+					>
+						{filter.label}
+					</button>
+				))}
 			</div>
 		</div>
 	);
