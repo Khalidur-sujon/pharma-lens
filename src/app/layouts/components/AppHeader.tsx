@@ -1,14 +1,17 @@
 import { Menu, CircleUserRound } from "lucide-react";
 import SearchBox from "../../../shared/components/SearchBox";
 import DateFilter from "./DateFilter";
+import { useSidebarStore } from "../../../shared/store/useSidebarStore";
 
 export default function AppHeader() {
+	const toggleSidebar = useSidebarStore((state) => state.toggleSidebar);
 	return (
 		<header className="sticky top-0 z-50 h-16 border-b border-slate-200 bg-white/90 backdrop-blur">
 			<div className="flex h-full items-center justify-between px-4 md:px-6">
 				{/* Left */}
 				<div className="flex items-center gap-3">
 					<button
+						onClick={toggleSidebar}
 						className="rounded-lg p-2 transition-colors hover:bg-slate-100 lg:hidden"
 						aria-label="Open menu"
 					>
