@@ -205,6 +205,6 @@ Every interface in Pharma Lens is designed to reduce cognitive load, surface mea
 
 ## About This Project
 
-Pharma Lens is an ongoing portfolio project created to showcase my frontend engineering approach, with an emphasis on scalable architecture, reusable UI systems and thoughtful product design.
+Pharma Lens is an ongoing project created to showcase my frontend engineering approach, with an emphasis on scalable architecture, reusable UI systems and thoughtful product design.
 
 As the project evolves, backend services and production features will be integrated without requiring major architectural changes.
