@@ -1,5 +1,4 @@
 import { Menu, CircleUserRound } from "lucide-react";
-import SearchBox from "../../../shared/components/SearchBox";
 import DateFilter from "./DateFilter";
 import { useSidebarStore } from "../../../shared/store/useSidebarStore";
 
