@@ -21,14 +21,14 @@ export default function FitBounds() {
 
 		// Mobile
 		if (width < 640) {
-			paddingTop = -400;
+			paddingTop = -270;
 			paddingRight = 16;
 			paddingBottom = 24;
 			paddingLeft = 16;
 		}
 		// Tablet
 		else if (width < 1024) {
-			paddingTop = -370;
+			paddingTop = -270;
 			paddingRight = 20;
 			paddingBottom = 24;
 			paddingLeft = 20;

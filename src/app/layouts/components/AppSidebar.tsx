@@ -201,7 +201,7 @@ export default function AppSidebar() {
 
 						<div
 							className="
-								max-h-96
+								max-h-72
 								space-y-2.5
 								overflow-y-auto
 								pr-3
