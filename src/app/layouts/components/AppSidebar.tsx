@@ -105,7 +105,7 @@ export default function AppSidebar() {
 			<aside
 				className={`
 					fixed inset-y-0 left-0
-					z-1000
+					z-900
 
 					flex
 					h-screen

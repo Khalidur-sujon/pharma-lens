@@ -58,11 +58,6 @@ export default function TerritoryDrawer() {
 					}
 				`}
 			>
-				{/* Mobile Handle */}
-				<div className="flex justify-center py-3 md:hidden">
-					<div className="h-1.5 w-14 rounded-full bg-slate-300" />
-				</div>
-
 				{/* Header */}
 				<div className="sticky top-0 z-10 border-b border-slate-200 bg-white/90 backdrop-blur-md">
 					<div className="flex items-center justify-between px-5 py-4 md:px-6 md:py-5">
@@ -78,7 +73,7 @@ export default function TerritoryDrawer() {
 
 						<button
 							onClick={close}
-							className="rounded-xl p-2 transition-all duration-200 hover:bg-slate-100 active:scale-95"
+							className="rounded-xl p-2 transition-all duration-200 hover:bg-slate-100 active:scale-95 hover:cursor-pointer"
 						>
 							<X size={20} />
 						</button>
@@ -135,19 +130,84 @@ export default function TerritoryDrawer() {
 						</div>
 					</div>
 
-					{/* Coming Soon */}
+					{/* Product Roadmap */}
 					<div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4 md:p-5">
 						<h3 className="font-semibold text-slate-900">
-							Coming Soon
+							Product Roadmap
 						</h3>
 
-						<ul className="mt-4 space-y-3 text-sm text-slate-500">
-							<li>📈 Sales Trend Chart</li>
-							<li>🏢 Company Ranking</li>
-							<li>🏥 Pharmacy Ranking</li>
-							<li>👨‍💼 Representative Performance</li>
-							<li>📊 Monthly Growth</li>
-						</ul>
+						<p className="mt-1 text-sm text-slate-500">
+							Upcoming capabilities planned for future releases.
+						</p>
+
+						<div className="mt-5 space-y-3">
+							<div className="flex items-start justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3">
+								<div className="min-w-0 flex-1">
+									<p className="font-medium text-slate-900">
+										Sales Trend Analytics
+									</p>
+
+									<p className="mt-1 text-xs leading-5 text-slate-500">
+										Track daily, weekly and monthly sales
+										performance.
+									</p>
+								</div>
+
+								<span className="shrink-0 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-medium text-amber-700">
+									In Progress
+								</span>
+							</div>
+
+							<div className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3">
+								<div>
+									<p className="font-medium text-slate-900">
+										Territory Growth Insights
+									</p>
+
+									<p className="text-xs text-slate-500">
+										Compare regional growth and performance.
+									</p>
+								</div>
+
+								<span className="rounded-full bg-blue-100 px-2.5 py-1 text-xs font-medium text-blue-700">
+									Planned
+								</span>
+							</div>
+
+							<div className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3">
+								<div>
+									<p className="font-medium text-slate-900">
+										Inventory Health
+									</p>
+
+									<p className="text-xs text-slate-500">
+										Low stock, reorder suggestions and
+										expiry alerts.
+									</p>
+								</div>
+
+								<span className="rounded-full bg-blue-100 px-2.5 py-1 text-xs font-medium text-blue-700">
+									Planned
+								</span>
+							</div>
+
+							<div className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3">
+								<div>
+									<p className="font-medium text-slate-900">
+										AI Demand Forecast
+									</p>
+
+									<p className="text-xs text-slate-500">
+										Predict demand and identify sales
+										opportunities.
+									</p>
+								</div>
+
+								<span className="rounded-full bg-violet-100 px-2.5 py-1 text-xs font-medium text-violet-700">
+									Vision
+								</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</aside>
