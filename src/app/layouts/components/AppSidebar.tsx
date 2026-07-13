@@ -94,7 +94,7 @@ export default function AppSidebar() {
 					onClick={closeSidebar}
 					className="
 						fixed inset-0
-						z-999
+						z-900
 						bg-black/30
 						backdrop-blur-sm
 						min-[1330px]:hidden
@@ -105,7 +105,7 @@ export default function AppSidebar() {
 			<aside
 				className={`
 					fixed inset-y-0 left-0
-					z-900
+					z-999
 
 					flex
 					h-screen
