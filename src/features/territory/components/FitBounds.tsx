@@ -12,17 +12,40 @@ export default function FitBounds() {
 
 		if (!bounds.isValid()) return;
 
+		const width = window.innerWidth;
+
+		let paddingTop = 20;
+		let paddingRight = 20;
+		let paddingBottom = 20;
+		let paddingLeft = 20;
+
+		// Mobile
+		if (width < 640) {
+			paddingTop = -400;
+			paddingRight = 16;
+			paddingBottom = 24;
+			paddingLeft = 16;
+		}
+		// Tablet
+		else if (width < 1024) {
+			paddingTop = -370;
+			paddingRight = 20;
+			paddingBottom = 24;
+			paddingLeft = 20;
+		}
+		// Desktop
+		else {
+			paddingTop = -270;
+			paddingRight = 24;
+			paddingBottom = 24;
+			paddingLeft = 24;
+		}
+
 		map.fitBounds(bounds, {
-			padding: [20, 20],
 			maxZoom: 9,
 			animate: false,
-		});
-
-		// Move the map upward without changing zoom.
-		requestAnimationFrame(() => {
-			map.panBy([0, 70], {
-				animate: false,
-			});
+			paddingTopLeft: [paddingLeft, paddingTop],
+			paddingBottomRight: [paddingRight, paddingBottom],
 		});
 	}, [map]);
 

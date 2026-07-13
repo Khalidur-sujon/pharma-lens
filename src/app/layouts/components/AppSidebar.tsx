@@ -94,10 +94,10 @@ export default function AppSidebar() {
 					onClick={closeSidebar}
 					className="
 						fixed inset-0
-						z-[999]
+						z-999
 						bg-black/30
 						backdrop-blur-sm
-						lg:hidden
+						min-[1330px]:hidden
 					"
 				/>
 			)}
@@ -105,7 +105,7 @@ export default function AppSidebar() {
 			<aside
 				className={`
 					fixed inset-y-0 left-0
-					z-[1000]
+					z-1000
 
 					flex
 					h-screen
@@ -123,9 +123,9 @@ export default function AppSidebar() {
 
 					${isOpen ? "translate-x-0" : "-translate-x-full"}
 
-					lg:static
-					lg:h-auto
-					lg:translate-x-0
+					min-[1330px]:static
+					min-[1330px]:h-auto
+					min-[1330px]:translate-x-0
 				`}
 			>
 				{/* Mobile Header */}
@@ -137,7 +137,7 @@ export default function AppSidebar() {
 						border-b
 						border-slate-200
 						p-3
-						lg:hidden
+						min-[1330px]:hidden
 					"
 				>
 					<div className="flex items-center gap-2">
@@ -201,10 +201,11 @@ export default function AppSidebar() {
 
 						<div
 							className="
-								max-h-64
+								max-h-96
 								space-y-2.5
 								overflow-y-auto
-								pr-1
+								pr-3
+								scrollbar-gutter-stable
 							"
 						>
 							{summary.map((item) => (

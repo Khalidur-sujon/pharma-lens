@@ -172,7 +172,7 @@ export default function TopMedicinesSection() {
 
 			{/* Rows */}
 			<div
-				className="max-h-24 overflow-y-auto pr-3"
+				className="max-h-24 min-[1024px]:max-h-28 overflow-y-auto pr-3"
 				style={{
 					scrollbarGutter: "stable",
 				}}
@@ -181,7 +181,7 @@ export default function TopMedicinesSection() {
 					{medicines.map((medicine) => (
 						<div
 							key={medicine.name}
-							className="grid grid-cols-[2.2fr_1fr_1.5fr_1fr] items-center gap-2 py-2"
+							className="grid grid-cols-[2.2fr_1fr_1.5fr_1fr] items-center gap-2 py-3 "
 						>
 							{/* Medicine */}
 							<p className="truncate text-xs font-medium">

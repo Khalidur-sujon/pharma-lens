@@ -99,7 +99,7 @@ export default function AllZoneSection() {
 
 	const zones = zoneData[selectedPeriod];
 	return (
-		<div className="flex h-full w-full min-h-96 flex-col rounded-xl border border-slate-200 bg-white p-4">
+		<div className="flex h-full w-full min-h-96  flex-col rounded-xl border border-slate-200 bg-white p-4">
 			<SectionTitle title={`All Zones (${zones.length})`} />
 
 			<div className="mt-4 flex-1 space-y-2 overflow-y-auto pr-1">

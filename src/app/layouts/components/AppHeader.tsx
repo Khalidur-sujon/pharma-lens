@@ -12,7 +12,7 @@ export default function AppHeader() {
 				<div className="flex items-center gap-3">
 					<button
 						onClick={toggleSidebar}
-						className="rounded-lg p-2 transition-colors hover:bg-slate-100 lg:hidden"
+						className="rounded-lg p-2 transition-colors hover:bg-slate-100 hover:cursor-pointer min-[1330px]:hidden "
 						aria-label="Open menu"
 					>
 						<Menu size={20} />
@@ -23,15 +23,15 @@ export default function AppHeader() {
 							Pharma Lens
 						</h1>
 
-						<p className="hidden text-xs text-slate-500 md:block">
+						<p className="hidden text-xs text-slate-500 min-[1192px]:block">
 							Operational Intelligence
 						</p>
 					</div>
 				</div>
 
 				{/* Center */}
-				<div className="hidden w-full max-w-3xl items-center gap-4 lg:flex">
-					<SearchBox />
+				<div className="hidden w-full max-w-xl min-[1000px]:flex items-center justify-center">
+					{/* <SearchBox /> */}
 					<DateFilter />
 				</div>
 
@@ -45,7 +45,7 @@ export default function AppHeader() {
 							<CircleUserRound size={22} />
 						</div>
 
-						<div className="hidden text-left lg:block">
+						<div className=" text-left">
 							<p className="text-sm font-semibold text-slate-900">
 								Admin
 							</p>

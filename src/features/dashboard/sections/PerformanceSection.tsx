@@ -321,7 +321,7 @@ export default function PerformanceSection() {
 						</span>
 					</div>
 
-					<div className="flex items-center gap-5">
+					<div className="flex items-center gap-5 ">
 						<div className="h-28 w-28 shrink-0">
 							<div className="h-28 w-24 shrink-0 [&_*:focus]:outline-none">
 								<ResponsiveContainer width="100%" height="100%">
