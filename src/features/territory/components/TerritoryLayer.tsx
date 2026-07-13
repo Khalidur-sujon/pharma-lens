@@ -1,6 +1,5 @@
 import { GeoJSON } from "react-leaflet";
 import tangail from "../../../assets/tangail-geo.json";
-import tangailUpazila from "../../../assets/tangail-upazila.json";
 import type { FeatureCollection } from "geojson";
 import { useTerritoryStore } from "../store/territory.store";
 import { upazilaData } from "../data/upazila.data";
@@ -40,6 +39,10 @@ const tangailUpazilaNames = [
 	"Sakhipur",
 	"Tangail Sadar",
 ];
+
+const response = await fetch("/maps/tangail-upazila.json");
+
+const tangailUpazila = await response.json();
 
 const tangailFeatures: FeatureCollection = {
 	...(tangailUpazila as FeatureCollection),

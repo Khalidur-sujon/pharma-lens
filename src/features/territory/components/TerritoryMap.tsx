@@ -1,3 +1,5 @@
+import "leaflet/dist/leaflet.css";
+
 import { MapContainer } from "react-leaflet";
 import TerritoryLayer from "./TerritoryLayer";
 import FitBounds from "./FitBounds";
